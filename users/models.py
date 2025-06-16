@@ -13,3 +13,10 @@ class AsosiyModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class Users(AbstractUser):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False)
+    role = models.CharField()
+    telegram_id = models.IntegerField()
+    kurs_like = models.ManyToManyField()
