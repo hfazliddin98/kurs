@@ -1,0 +1,33 @@
+{% extends 'asosiy/base.html' %}
+
+{% block title %}Bosh Sahifa{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Xush kelibsiz!</h2>
+                <p class="card-text">Bu Bootstrap 5.3 va Django bilan yaratilgan sahifa.</p>
+                <a href="" class="btn btn-primary">
+                    <i class="bi bi-info-circle"></i> Batafsil ma'lumot
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Yangiliklar</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Yangi funksiyalar qo'shildi</li>
+                    <li class="list-group-item">Sayt yangilandi</li>
+                    <li class="list-group-item">Bog'lanish uchun forma</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

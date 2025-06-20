@@ -1,0 +1,72 @@
+<!-- templates/partials/footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="{% url 'home' %}">Edu<span>Online</span></a>
+                </div>
+                <p class="footer-about">
+                    Biz bilan istalgan joyda, istalgan vaqtda zamonaviy kasblarni o'rganing.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Kurslar</h3>
+                <ul>
+                    <li><a href="{% url 'courses' %}?category=programming">Dasturlash</a></li>
+                    <li><a href="{% url 'courses' %}?category=design">Dizayn</a></li>
+                    <li><a href="{% url 'courses' %}?category=business">Biznes</a></li>
+                    <li><a href="{% url 'courses' %}?category=marketing">Marketing</a></li>
+                    <li><a href="{% url 'courses' %}?category=music">Musiqa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Kompaniya</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">Biz haqimizda</a></li>
+                    <li><a href="{% url 'careers' %}">Karyera</a></li>
+                    <li><a href="{% url 'partnership' %}">Hamkorlik</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Aloqa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Yordam</h3>
+                <ul>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    <li><a href="{% url 'support' %}">Qo'llab-quvvat</a></li>
+                    <li><a href="{% url 'terms' %}">Shartlar</a></li>
+                    <li><a href="{% url 'privacy' %}">Maxfiylik</a></li>
+                    <li><a href="{% url 'payment' %}">To'lov usullari</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Yangiliklar</h3>
+                <p>Yangiliklar va chegirmalardan xabardor bo'lish uchun obuna bo'ling.</p>
+                <form class="newsletter-form" method="post" action="{% url 'subscribe' %}">
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="Email manzilingiz" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} EduOnline. Barcha huquqlar himoyalangan.</p>
+            <div class="footer-links">
+                <a href="{% url 'privacy' %}">Maxfiylik siyosati</a>
+                <a href="{% url 'terms' %}">Foydalanish shartlari</a>
+            </div>
+        </div>
+    </div>
+</footer>

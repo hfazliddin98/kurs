@@ -34,9 +34,8 @@ class KursMavzu(AsosiyModel):
 
 class BolimTest(AsosiyModel):
     bolim_id = models.ForeignKey(KursBolim, on_delete=models.CASCADE)
-    savol = models.CharField(max_length=355)
+    savol = models.JSONField()
     a = models.CharField(max_length=30)
     b = models.CharField(max_length=30)
     c = models.CharField(max_length=30)
     d = models.CharField(max_length=30)
-    test_javob = models.CharField(max_length=30, choices=TestRoleChoice.choices)

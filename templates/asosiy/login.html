@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduOnline - Online Ta'lim Platformasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="{% static 'css/auth.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>Edu</span><span>Online</span>
+            </div>
+            <div class="nav-auth">
+                <a class="auth-btn login-btn" href="{% url 'login' %}">Kirish</a>
+                <a class="auth-btn signup-btn" href="{% url 'signup' %}">Ro'yxatdan o'tish</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Online ta'lim platformasiga xush kelibsiz</h1>
+            <p>O'qishni boshlash uchun ro'yxatdan o'ting. Barcha foydalanuvchilar Telegram hisobi bilan bog'lanishi shart</p>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="auth-container" id="login-box">
+            <h2 class="auth-title">Hisobingizga kiring</h2>
+            <p class="auth-subtitle">Foydalanuvchi nomi va parolingizni kiriting</p>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Foydalanuvchi nomi</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" id="login-username" class="form-control" placeholder="foydalanuvchi123" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Parol</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('login-password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align: right;">
+                    <a href="#" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">Parolni unutdingizmi?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirish</button>
+                
+                <button type="button" class="btn btn-telegram" id="telegram-login-btn">
+                    <i class="fab fa-telegram"></i>
+                    Telegram orqali kirish
+                </button>
+            </form>
+            
+            <div class="auth-footer">
+                Hisobingiz yo'qmi? <a href="#" onclick="showSignup()">Ro'yxatdan o'tish</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <footer>
+        <div class="container">
+            &copy; 2023 <span>Edu</span><span>Online</span>. Barcha huquqlar himoyalangan.
+        </div>
+    </footer>
+    
+    <script src="{% static 'js/auth.js' %}"></script>
+</body>
+</html>

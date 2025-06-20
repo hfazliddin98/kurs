@@ -49,7 +49,7 @@ ROOT_URLCONF = 'asosiy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,8 +111,16 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# # STATICFILES_DIRS = [BASE_DIR / "static"]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 MEDIA_URL = 'media/'

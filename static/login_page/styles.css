@@ -1,0 +1,346 @@
+:root {
+            --primary: #4F46E5;
+            --secondary: #4338CA;
+            --accent: #6366F1;
+            --text: #2c3e50;
+            --light: #f8f9fa;
+            --gray: #95a5a6;
+            --white: #ffffff;
+            --danger: #e74c3c;
+            --success: #2ecc71;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        header {
+            background: white;
+            color: var(--text);
+            padding: 25px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span:first-child {
+            color: black;
+        }
+        
+        .logo span:last-child {
+            color: var(--primary);
+        }
+        
+        .nav-auth {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .auth-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .login-btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .login-btn:hover {
+            background: rgba(79, 70, 229, 0.1);
+        }
+        
+        .signup-btn {
+            background: var(--primary);
+            border: 2px solid var(--primary);
+            color: white;
+        }
+        
+        .signup-btn:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .hero {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .auth-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        .auth-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text);
+            text-align: center;
+        }
+        
+        .auth-subtitle {
+            color: var(--gray);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            color: var(--gray);
+            pointer-events: none;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 45px 15px 45px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-control:hover {
+            border-color: var(--accent);
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+            outline: none;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            color: var(--gray);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        .password-strength {
+            height: 5px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s;
+        }
+        
+        .strength-weak {
+            background: var(--danger);
+            width: 33%;
+        }
+        
+        .strength-medium {
+            background: var(--warning);
+            width: 66%;
+        }
+        
+        .strength-strong {
+            background: var(--success);
+            width: 100%;
+        }
+        
+        .strength-text {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: var(--gray);
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+        }
+        
+        .btn-telegram {
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .btn-telegram:hover {
+            background: var(--secondary);
+        }
+        
+        .btn-telegram-connected {
+            background: var(--success);
+            cursor: default;
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+        }
+        
+        .auth-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            display: none;
+        }
+        
+        .alert-danger {
+            background-color: #fdecea;
+            color: var(--danger);
+            border-left: 4px solid var(--danger);
+        }
+        
+        .alert-success {
+            background-color: #e8f5e9;
+            color: var(--success);
+            border-left: 4px solid var(--success);
+        }
+        
+        .alert i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .error-message {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            color: black;
+            margin-top: auto;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer span:last-child {
+            color: var(--primary);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .auth-container {
+                padding: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }

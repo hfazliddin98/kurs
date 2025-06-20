@@ -1,0 +1,32 @@
+{% load static %}
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="{% url 'home' %}">Edu<span>Online</span></a>
+        </div>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                <li><a href="">Kurslar</a></li>
+                <li><a href="">Ustozlar</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Aloqa</a></li>
+            </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+            {% if user.is_authenticated %}
+                <a href="" class="btn dashboard-btn">Dashboard</a>
+                <a href="" class="btn logout-btn">Chiqish</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn login-btn">Kirish</a>
+                <a href="{% url 'signup' %}" class="btn register-btn">Ro'yxatdan o'tish</a>
+            {% endif %}
+        </div>
+        
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>

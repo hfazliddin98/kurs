@@ -1,0 +1,492 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Kurs Platformasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+
+
+    {% else %}
+     
+    {% include "asosiy/header.html" %}
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kelajak kasblarini o'rganing</h1>
+                <p>1000+ kurslar, professional ustozlar va istalgan joyda o'rganish imkoniyati</p>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Qanday kurs qidiryapsiz?">
+                    <button class="search-btn"><i class="fas fa-search"></i> Qidirish</button>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>10,000+</h3>
+                        <p>O'quvchilar</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Ustozlar</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1,200+</h3>
+                        <p>Kurslar</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Online ta'lim">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategoriyalar -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategoriyalar</h2>
+            
+            <div class="category-list">
+                <div class="category-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Dasturlash</h3>
+                    <p>120 kurs</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Biznes</h3>
+                    <p>85 kurs</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Dizayn</h3>
+                    <p>64 kurs</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>Fotografiya</h3>
+                    <p>42 kurs</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-music"></i>
+                    <h3>Musiqa</h3>
+                    <p>37 kurs</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <h3>Boshqalar</h3>
+                    <p>152 kurs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mashhur kurslar -->
+    <section class="popular-courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mashhur kurslar</h2>
+                <a href="#" class="view-all">Barchasini ko'rish <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="course-list">
+                <!-- Kurs 1 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Python kursi">
+                        <div class="course-price">$49.99</div>
+                        <div class="course-badge">Bestseller</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <span class="course-category">Dasturlash</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i> 4.8
+                                <span>(1,245)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Python dasturlash: Noldan boshlab</h3>
+                        <p class="course-description">Python dasturlash tilini 0 dan o'rganing va real loyihalar yarating.</p>
+                        <div class="course-meta">
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i> 28 soat
+                            </div>
+                            <div class="course-students">
+                                <i class="far fa-user"></i> 5,430
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kurs 2 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="UI/UX dizayn">
+                        <div class="course-price">$59.99</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <span class="course-category">Dizayn</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i> 4.7
+                                <span>(892)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">UI/UX dizayn: To'liq qo'llanma</h3>
+                        <p class="course-description">Zamonaviy interfeyslar va foydalanuvchi tajribasini yaratish.</p>
+                        <div class="course-meta">
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i> 35 soat
+                            </div>
+                            <div class="course-students">
+                                <i class="far fa-user"></i> 3,210
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kurs 3 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Data Science">
+                        <div class="course-price">$79.99</div>
+                        <div class="course-badge">Yangi</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <span class="course-category">Data Science</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i> 4.9
+                                <span>(1,532)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Data Science va Machine Learning</h3>
+                        <p class="course-description">Ma'lumotlarni tahlil qilish va sun'iy intellekt modellarini yaratish.</p>
+                        <div class="course-meta">
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i> 42 soat
+                            </div>
+                            <div class="course-students">
+                                <i class="far fa-user"></i> 7,890
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kurs 4 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Biznes boshqaruvi">
+                        <div class="course-price">$39.99</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <span class="course-category">Biznes</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i> 4.6
+                                <span>(756)</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Startap qurish: Boshlang'ich qo'llanma</h3>
+                        <p class="course-description">O'z biznesingizni qanday boshlash va rivojlantirish haqida bilib oling.</p>
+                        <div class="course-meta">
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i> 22 soat
+                            </div>
+                            <div class="course-students">
+                                <i class="far fa-user"></i> 2,450
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ustozlar -->
+    <section class="instructors">
+        <div class="container">
+            <h2 class="section-title">Professional ustozlar</h2>
+            
+            <div class="instructor-list">
+                <!-- Ustoz 1 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ustoz">
+                    </div>
+                    <h3 class="instructor-name">John Smith</h3>
+                    <p class="instructor-specialty">Dasturlash mutaxassisi</p>
+                    <div class="instructor-stats">
+                        <div class="stat">
+                            <span>24</span>
+                            <p>Kurslar</p>
+                        </div>
+                        <div class="stat">
+                            <span>12,450</span>
+                            <p>O'quvchilar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ustoz 2 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ustoz">
+                    </div>
+                    <h3 class="instructor-name">Sarah Johnson</h3>
+                    <p class="instructor-specialty">UI/UX Dizayner</p>
+                    <div class="instructor-stats">
+                        <div class="stat">
+                            <span>18</span>
+                            <p>Kurslar</p>
+                        </div>
+                        <div class="stat">
+                            <span>8,760</span>
+                            <p>O'quvchilar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ustoz 3 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ustoz">
+                    </div>
+                    <h3 class="instructor-name">Michael Brown</h3>
+                    <p class="instructor-specialty">Data Scientist</p>
+                    <div class="instructor-stats">
+                        <div class="stat">
+                            <span>15</span>
+                            <p>Kurslar</p>
+                        </div>
+                        <div class="stat">
+                            <span>14,320</span>
+                            <p>O'quvchilar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ustoz 4 -->
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ustoz">
+                    </div>
+                    <h3 class="instructor-name">Emily Davis</h3>
+                    <p class="instructor-specialty">Biznes menejeri</p>
+                    <div class="instructor-stats">
+                        <div class="stat">
+                            <span>12</span>
+                            <p>Kurslar</p>
+                        </div>
+                        <div class="stat">
+                            <span>6,540</span>
+                            <p>O'quvchilar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforma afzalliklari -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Nega bizni tanlashadi?</h2>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Har qanday qurilmada</h3>
+                    <p>Kompyuter, planshet yoki telefon - istalgan qurilmada o'qishingiz mumkin</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Sertifikat</h3>
+                    <p>Kursni muvaffaqiyatli tamomlaganingizda sertifikat oling</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Professional ustozlar</h3>
+                    <p>Sanoqning eng yaxshi mutaxassislaridan bilim oling</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 qo'llab-quvvatlash</h3>
+                    <p>Har qanday savol uchun doimo yordam mavjud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foydalanuvchi sharhlari -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Foydalanuvchilar fikrlari</h2>
+            
+            <div class="testimonial-list">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Bu platforma orqali dasturlashni o'rganish juda oson bo'ldi. Ustozlar har bir mavzuni juda tushunarli tarzda tushuntirishadi. Tavsiya etaman!"
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Foydalanuvchi">
+                        <div class="author-info">
+                            <h4>Azizbek Rahimov</h4>
+                            <p>Python dasturchi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "UI/UX dizayn kursi mening kareramga katta hissa qo'shdi. Endi professional dizayner bo'lib ishlayman. Rahmat!"
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Foydalanuvchi">
+                        <div class="author-info">
+                            <h4>Dilfuza Karimova</h4>
+                            <p>UI/UX Dizayner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Data Science kursi ajoyib tuzilgan. Har bir dars amaliy bilimlar bilan to'ldirilgan. O'qituvchilar juda tajribali."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Foydalanuvchi">
+                        <div class="author-info">
+                            <h4>Javlon Toshmatov</h4>
+                            <p>Data Scientist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>O'zingizga mos kursni toping</h2>
+                <p>500,000+ o'quvchilar biz bilan bilim olishmoqda. Siz ham ular qatoriga qo'shiling!</p>
+                <a href="#" class="btn cta-btn">Kurslarni ko'rish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">Edu<span>Online</span></a>
+                    </div>
+                    <p class="footer-about">
+                        Biz bilan istalgan joyda, istalgan vaqtda zamonaviy kasblarni o'rganing.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Kurslar</h3>
+                    <ul>
+                        <li><a href="#">Dasturlash</a></li>
+                        <li><a href="#">Dizayn</a></li>
+                        <li><a href="#">Biznes</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Musiqa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Kompaniya</h3>
+                    <ul>
+                        <li><a href="#">Biz haqimizda</a></li>
+                        <li><a href="#">Karyera</a></li>
+                        <li><a href="#">Hamkorlik</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Aloqa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Yordam</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Qo'llab-quvvat</a></li>
+                        <li><a href="#">Shartlar</a></li>
+                        <li><a href="#">Maxfiylik</a></li>
+                        <li><a href="#">To'lov usullari</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Yangiliklar</h3>
+                    <p>Yangiliklar va chegirmalardan xabardor bo'lish uchun obuna bo'ling.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email manzilingiz">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EduOnline. Barcha huquqlar himoyalangan.</p>
+                <div class="footer-links">
+                    <a href="#">Maxfiylik siyosati</a>
+                    <a href="#">Foydalanish shartlari</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endif %}
+
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
